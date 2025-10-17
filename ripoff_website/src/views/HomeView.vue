@@ -236,6 +236,12 @@ const milestones = [
 ]
 </script>
 
+<script>
+export default {
+  name: 'HomeView',
+}
+</script>
+
 <style scoped>
 .exo {
   font-family: 'Exo 2';
