@@ -10,7 +10,8 @@
     "materialize": "^1.0.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuetify": "^3.10.5"
+    "vuetify": "^3.10.5",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",
