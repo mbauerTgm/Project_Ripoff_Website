@@ -83,9 +83,9 @@
         </v-container>
       </section>
 
-      <!-- Fortschritt -->
-      <section id="fortschritt" class="section-container">
-        <h2 class="section-title">Fortschrittsdokumentation</h2>
+      <!-- Meilensteine -->
+      <section id="meilensteine" class="section-container">
+        <h2 class="section-title">Meilensteine</h2>
         <v-container>
           <v-data-table :headers="headers" :items="milestones" class="elevated-card text-grey-darken-3"
             hide-default-footer style="font-size: 1.5rem;">
@@ -100,6 +100,57 @@
           </v-data-table>
         </v-container>
       </section>
+
+      <!-- Fortschritt -->
+<section id="timeline" class="section-container">
+  <h2 class="section-title">Fortschritt</h2>
+  <v-container class="py-8" justify="center">
+    <v-row justify="center">
+      <v-col cols="12" md="18">
+        <v-card class="elevated-card pa-15 text-center">
+          <v-timeline align="start">
+            <v-timeline-item>
+              <template v-slot:opposite>
+                Opposite content
+              </template>
+              <div>
+                <div class="text-h6">Content title</div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item>
+              <template v-slot:opposite>
+                Opposite content
+              </template>
+              <div>
+                <div class="text-h6">Content title</div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item>
+              <template v-slot:opposite>
+                Massiv
+              </template>
+              <div>
+                <div class="text-h6">Content title</div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </v-timeline-item>
+          </v-timeline>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</section>
+
 
       <!-- Kontakt -->
       <section id="kontakt" class="section-container text-center">
@@ -148,7 +199,7 @@ const scrollTo = (id) => {
 }
 // Prüft beim Scrollen, welcher Abschnitt gerade sichtbar ist
 const handleScroll = () => {
-  const sections = ["hero", "aufgabe", "team", "fortschritt", "kontakt"]
+  const sections = ["hero", "aufgabe", "team", "Meileinsteine", "kontakt"]
 
   for (const id of sections) {
     const el = document.getElementById(id)
@@ -179,7 +230,8 @@ function scrollUp(){
 const navLinks = [
   { id: "aufgabe", label: "Aufgabe" },
   { id: "team", label: "Team" },
-  { id: "fortschritt", label: "Fortschritt" },
+  { id: "meilensteine", label: "Meilensteine" },
+  { id: "timeline", label: "Fortschritt" },
   { id: "kontakt", label: "Kontakt" },
 ]
 
