@@ -102,54 +102,54 @@
       </section>
 
       <!-- Fortschritt -->
-<section id="timeline" class="section-container">
-  <h2 class="section-title">Fortschritt</h2>
-  <v-container class="py-8" justify="center">
-    <v-row justify="center">
-      <v-col cols="12" md="18">
-        <v-card class="elevated-card pa-15 text-center">
-          <v-timeline align="start">
-            <v-timeline-item>
-              <template v-slot:opposite>
-                Opposite content
-              </template>
-              <div>
-                <div class="text-h6">Content title</div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </v-timeline-item>
+      <section id="timeline" class="section-container">
+        <h2 class="section-title">Fortschritt</h2>
+        <v-container class="py-8" justify="center">
+          <v-row justify="center">
+            <v-col cols="12" md="18">
+              <v-card class="elevated-card pa-15 text-center">
+                <v-timeline align="start">
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      Entwicklung eines ersten funktionierenden Prototyps abgeschlossen
+                    </template>
+                    <div>
+                      <div class="text-h6">Content title</div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </v-timeline-item>
 
-            <v-timeline-item>
-              <template v-slot:opposite>
-                Opposite content
-              </template>
-              <div>
-                <div class="text-h6">Content title</div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      Opposite content
+                    </template>
+                    <div>
+                      <div class="text-h6">Content title</div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </v-timeline-item>
 
-            <v-timeline-item>
-              <template v-slot:opposite>
-                Massiv
-              </template>
-              <div>
-                <div class="text-h6">Content title</div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </v-timeline-item>
-          </v-timeline>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-</section>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      Massiv
+                    </template>
+                    <div>
+                      <div class="text-h6">Content title</div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </v-timeline-item>
+                </v-timeline>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+      </section>
 
 
       <!-- Kontakt -->
@@ -199,7 +199,7 @@ const scrollTo = (id) => {
 }
 // Prüft beim Scrollen, welcher Abschnitt gerade sichtbar ist
 const handleScroll = () => {
-  const sections = ["hero", "aufgabe", "team", "Meileinsteine", "kontakt"]
+  const sections = ["hero", "aufgabe", "team", "meilensteine","timeline", "kontakt"]
 
   for (const id of sections) {
     const el = document.getElementById(id)
@@ -405,6 +405,10 @@ background-color: #ffffff;
 .button:not(.active-nav-btn):hover {
   background-color: rgba(79, 112, 138, 0.08);
   color: #4F708A;
+}
+
+.unfinished_timeline_thing{
+  color: "#4F708A";
 }
 
 
