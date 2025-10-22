@@ -333,7 +333,7 @@ export default {
 
 .hero-section {
   height: 90vh;
-  background: url("") center/cover no-repeat;
+  background: url("../assets/RenderFinal.png") center/cover no-repeat;
   position: relative;
 }
 
