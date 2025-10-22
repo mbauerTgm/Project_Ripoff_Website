@@ -102,48 +102,63 @@
       </section>
 
       <!-- Fortschritt -->
-      <section id="timeline" class="section-container">
+      <section id="timeline" class="section-container exo">
         <h2 class="section-title">Fortschritt</h2>
         <v-container class="py-8" justify="center">
           <v-row justify="center">
             <v-col cols="12" md="18">
               <v-card class="elevated-card pa-15 text-center">
                 <v-timeline align="start">
+                  
                   <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      Entwicklung eines ersten funktionierenden Prototyps abgeschlossen
-                    </template>
-                    <div>
-                      <div class="text-h6">Content title</div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
+                  <template v-slot:opposite>
+                    <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                      21.10.2025
                     </div>
-                  </v-timeline-item>
+                  </template>
+
+                  <v-sheet
+                    class="exo pa-3"
+                    rounded="lg"
+                    elevation="0"
+                    style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                  >
+                    <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                      Kamera System fertiggestellt
+                    </div>
+
+                    <div class="text-body-2" style="color: #555;">
+                      Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's
+                      Cinemachine 3 implementiert.
+                    </div>
+                  </v-sheet>
+                </v-timeline-item>
+
 
                   <v-timeline-item :dot-color="'#4F708A'">
                     <template v-slot:opposite>
-                      Opposite content
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        21.10.2025
+                      </div>
                     </template>
-                    <div>
-                      <div class="text-h6">Content title</div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                    </div>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Kamera System fertiggestellt
+                      </div>
+
+                      <div class="text-body-2" style="color: #555;">
+                        Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's
+                        Cinemachine 3 implementiert.
+                      </div>
+                    </v-sheet>
                   </v-timeline-item>
 
-                  <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      Massiv
-                    </template>
-                    <div>
-                      <div class="text-h6">Content title</div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </v-timeline-item>
                 </v-timeline>
               </v-card>
             </v-col>
