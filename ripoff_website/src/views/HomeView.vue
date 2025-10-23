@@ -37,7 +37,7 @@
       </section>
 
       <!-- Aufgabe -->
-      <section id="aufgabe" class="section-container">
+      <section id="aufgabe" class="section-container-no-top">
         <h2 class="section-title">Projektbeschreibung</h2>
         <v-container class="py-8">
           <v-row justify="center">
@@ -140,7 +140,7 @@
                   <v-timeline-item :dot-color="'#4F708A'">
                     <template v-slot:opposite>
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        21.10.2025
+                        22.10.2025
                       </div>
                     </template>
 
@@ -148,15 +148,14 @@
                       class="exo pa-3"
                       rounded="lg"
                       elevation="0"
-                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Kamera System fertiggestellt
+                        Modelierung des Haupt-Charakters fertiggestellt
                       </div>
 
                       <div class="text-body-2" style="color: #555;">
-                        Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's
-                        Cinemachine 3 implementiert.
+                        Das Modell des Haupt-Charakter wurde samt Texturen in Blender fertiggestellt
                       </div>
                     </v-sheet>
                   </v-timeline-item>
@@ -206,7 +205,7 @@ import Foto_Maximilian_Bauer from "../assets/Foto_Maximilian_Bauer.jpg"
 import Foto_Victor_Bublinskyy from "../assets/Foto_Victor_Bublinskyy.jpg"
 import Foto_Jakob_Fenzl from "../assets/Foto_Jakob_Fenzl.jpg"
 import Foto_Dominik_Sandler from "../assets/Foto_Dominik_Sandler.jpg"
-import RenderFinal from "../assets/RenderFinal.png"
+import RenderFinal from "../assets/Render4k.png"
 
 const activeSection = ref("hero")
 
@@ -350,7 +349,7 @@ export default {
   left: 0;
   width: 100%;
   height: calc(180vh - var(--v-toolbar-height, 64px));
-  background-image: url("../assets/RenderFinal.png");
+  background-image: url("../assets/Render4k.png");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
@@ -375,6 +374,14 @@ export default {
 
 .section-container {
   padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+}
+
+.section-container-no-top {
+  padding-top: 0%;
   padding-bottom: 6rem;
   background: transparent !important;
   position: relative;
