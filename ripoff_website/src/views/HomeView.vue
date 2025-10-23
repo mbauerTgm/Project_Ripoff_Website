@@ -17,7 +17,9 @@
       </v-btn>
 
     </v-app-bar>
-    <v-main id="title" class="main-bg">
+    <v-main id="title" class="main-bg" :style="{ backgroundImage: `url(${RenderFinal})` }">
+      <div class="hero-background"></div>
+      <div class="hero-fade"></div>
       <!-- HERO -->
 
       <section id="hero" class="hero-section d-flex align-center justify-center text-center">
@@ -204,6 +206,7 @@ import Foto_Maximilian_Bauer from "../assets/Foto_Maximilian_Bauer.jpg"
 import Foto_Victor_Bublinskyy from "../assets/Foto_Victor_Bublinskyy.jpg"
 import Foto_Jakob_Fenzl from "../assets/Foto_Jakob_Fenzl.jpg"
 import Foto_Dominik_Sandler from "../assets/Foto_Dominik_Sandler.jpg"
+import RenderFinal from "../assets/RenderFinal.png"
 
 const activeSection = ref("hero")
 
@@ -314,44 +317,68 @@ export default {
   font-family: 'Exo 2';
 }
 
+.v-main,
+.v-container {
+  background: transparent !important;
+}
+
 .v-app-bar.exo,
 .v-app-bar.exo * {
   font-family: 'Exo 2', sans-serif !important;
 }
 
 .main-bg {
-  background: linear-gradient(180deg, #f7f8fa 0%, #eef1f4 100%);
+  position: relative;
+  overflow: hidden;
   color: #1a1a1a;
 }
 
-.nav-bar {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
-}
-
 .hero-section {
-  height: 90vh;
-  background: url("../assets/RenderFinal.png") center/cover no-repeat;
   position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  z-index: 2;
 }
 
-.hero-section::after {
-  content: "";
+.hero-background {
   position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.5);
+  top: calc(var(--v-toolbar-height, 64px));
+  left: 0;
+  width: 100%;
+  height: calc(180vh - var(--v-toolbar-height, 64px));
+  background-image: url("../assets/RenderFinal.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.hero-section>div {
+.hero-section > div {
   position: relative;
   z-index: 2;
+}
+
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #f7f8fa 100%);
+  z-index: 0; 
 }
 
 .section-container {
   padding-top: 6rem;
   padding-bottom: 6rem;
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
 }
 
 .section-title {
