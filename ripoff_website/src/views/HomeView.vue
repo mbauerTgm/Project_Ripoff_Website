@@ -19,7 +19,7 @@
     </v-app-bar>
     <v-main id="title" class="main-bg" :style="{ backgroundImage: `url(${RenderFinal})` }">
       <div class="hero-background"></div>
-      <div class="hero-fade"></div>
+
       <!-- HERO -->
 
       <section id="hero" class="hero-section d-flex align-center justify-center text-center">
@@ -30,14 +30,16 @@
           <p class="text-h6 mb-6 text-grey-darken-2 exo">
             Ein Squad-basiertes Taktik-Spiel
           </p>
+          <!--
           <v-btn style="color:#FCFCFC" color="#4F708A" variant="flat" size="x-large" elevation="2" class="px-8" @click="scrollTo('aufgabe')">
             Mehr erfahren
           </v-btn>
+          -->
         </div>
       </section>
 
       <!-- Aufgabe -->
-      <section id="aufgabe" class="section-container-no-top">
+      <section id="aufgabe" class="section-container">
         <h2 class="section-title">Projektbeschreibung</h2>
         <v-container class="py-8">
           <v-row justify="center">
@@ -129,7 +131,7 @@
                       Kamera System fertiggestellt
                     </div>
 
-                    <div class="text-body-2" style="color: #555;">
+                    <div class="text-body-2 exo" style="color: #555;">
                       Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's
                       Cinemachine 3 implementiert.
                     </div>
@@ -151,10 +153,10 @@
                       style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Modelierung des Haupt-Charakters fertiggestellt
+                        Modellierung des Haupt-Charakters fertiggestellt
                       </div>
 
-                      <div class="text-body-2" style="color: #555;">
+                      <div class="text-body-2 exo" style="color: #555;">
                         Das Modell des Haupt-Charakter wurde samt Texturen in Blender fertiggestellt
                       </div>
                     </v-sheet>
@@ -348,11 +350,11 @@ export default {
   top: calc(var(--v-toolbar-height, 64px));
   left: 0;
   width: 100%;
-  height: calc(180vh - var(--v-toolbar-height, 64px));
+  height: calc(250vh - var(--v-toolbar-height, 64px));
   background-image: url("../assets/Render4k.png");
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: contain;
+  background-size: cover;
   z-index: 1;
   pointer-events: none;
 }
