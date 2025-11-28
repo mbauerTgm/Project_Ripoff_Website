@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "materialize": "^1.0.0",
+    "photoswipe": "^5.4.4",
     "vue": "^3.2.13",
     "vuetify": "^3.10.5",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
+    "@mdi/font": "^7.4.47",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "sass": "^1.93.2",

@@ -52,10 +52,10 @@
                 <p style="font-size: 1.5rem">
                   Der Spieler steuert ein Team, das koordiniert Räumlichkeiten betritt und Gefahren beseitigt.
                 </p>
-                <P style="font-size: 1.5rem">
+                <p style="font-size: 1.5rem">
                   Das Szenario spielt in einer Science-Fiction Zukunft in KI die Welt übernommen hat und sich in
                   Fraktionen gespalten hat. Nun sind sie alle auf der Suche nach wertvollen Daten Resourcen.
-                </P>
+                </p>
               </v-card>
             </v-col>
           </v-row>
@@ -113,6 +113,29 @@
             <v-col cols="12" md="18">
               <v-card class="elevated-card pa-15 text-center">
                 <v-timeline align="start">
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        02.10.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Observer Pattern Implementierung
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Fertigstellung des Messaging Services inkl. Dokumentation, zur umsetzungen des Observer Patterns in den Systemen
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
                   
                   <v-timeline-item :dot-color="'#4F708A'">
                   <template v-slot:opposite>
@@ -125,7 +148,7 @@
                     class="exo pa-3"
                     rounded="lg"
                     elevation="0"
-                    style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
                   >
                     <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
                       Kamera System fertiggestellt
@@ -150,7 +173,7 @@
                       class="exo pa-3"
                       rounded="lg"
                       elevation="0"
-                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
                         Modellierung des Haupt-Charakters fertiggestellt
@@ -162,12 +185,75 @@
                     </v-sheet>
                   </v-timeline-item>
 
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        05.11.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Design des Hauptmenü fertiggestellt
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Das Design des Hauptmenüs wurde fertiggestellt inklusive Einstellungen und mit dem Prototyp verbunden.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                   <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        6.11.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        UI Kommandomenü fertiggestellt
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Das Kommandomenü wurde fertiggestellt und mit dem Observer Pattern verbunden.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
                 </v-timeline>
               </v-card>
             </v-col>
           </v-row>
         </v-container>
       </section>
+
+      <!-- Bilder-Galerie -->
+      <section id="gallery" class="section-container text-center">
+        <h2 class="section-title">Entwicklungs Insights</h2>
+          <div :id="galleryID">
+        <a
+          v-for="(image, key) in images"
+          :key="key"
+          :href="image.largeURL"
+          :data-pswp-width="image.width"
+          :data-pswp-height="image.height"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-height: 270px; object-fit: cover;"/>
+        </a>
+      </div>
+      </section>
+
 
 
       <!-- Kontakt -->
@@ -188,6 +274,9 @@
           </v-row>
         </v-container>
       </section>
+      <v-btn icon class="button" style="margin-bottom: 2%;" @click="scrollUp()">
+        <v-icon>mdi-chevron-up</v-icon>
+      </v-btn>
     </v-main>
 
     <!-- Footer -->
@@ -202,29 +291,60 @@
 </template>
 
 <script setup>
-import { ref , onMounted, onUnmounted} from "vue"
+import { ref, onMounted, onUnmounted } from "vue"
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+
 import Foto_Maximilian_Bauer from "../assets/Foto_Maximilian_Bauer.jpg"
 import Foto_Victor_Bublinskyy from "../assets/Foto_Victor_Bublinskyy.jpg"
 import Foto_Jakob_Fenzl from "../assets/Foto_Jakob_Fenzl.jpg"
 import Foto_Dominik_Sandler from "../assets/Foto_Dominik_Sandler.jpg"
 import RenderFinal from "../assets/Render4k.png"
 
+const props = defineProps({
+  galleryID: String,
+  images: Array,
+});
+
 const activeSection = ref("hero")
+let lightbox = null;
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll)
+  handleScroll() 
+
+  if (!lightbox) {
+    lightbox = new PhotoSwipeLightbox({
+      gallery: '#' + props.galleryID, 
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll)
+  
+
+  if (lightbox) {
+    lightbox.destroy();
+    lightbox = null;
+  }
+})
 
 const scrollTo = (id) => {
   activeSection.value = id
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: "smooth" })
 }
-// Prüft beim Scrollen, welcher Abschnitt gerade sichtbar ist
+
 const handleScroll = () => {
   const sections = ["hero", "aufgabe", "team", "meilensteine","timeline", "kontakt"]
-
   for (const id of sections) {
     const el = document.getElementById(id)
     if (el) {
       const rect = el.getBoundingClientRect()
-      // Wenn der obere Teil der Section im sichtbaren Bereich liegt
       if (rect.top <= 150 && rect.bottom >= 150) {
         activeSection.value = id
         break
@@ -233,24 +353,18 @@ const handleScroll = () => {
   }
 }
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll)
-  handleScroll() // initial aufrufen
-})
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll)
-})
-
 function scrollUp(){
   const el = document.getElementById("title")
   if (el) el.scrollIntoView({ behavior: "smooth" })
 }
+
+
 const navLinks = [
   { id: "aufgabe", label: "Aufgabe" },
   { id: "team", label: "Team" },
   { id: "meilensteine", label: "Meilensteine" },
   { id: "timeline", label: "Fortschritt" },
+  { id: "gallery", label: "Galerie" }, 
   { id: "kontakt", label: "Kontakt" },
 ]
 
@@ -307,15 +421,14 @@ const milestones = [
 ]
 </script>
 
-<script>
-export default {
-  name: 'HomeView',
-}
-</script>
-
 <style scoped>
 .exo {
   font-family: 'Exo 2';
+}
+
+.no-press-color:active {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .v-main,
