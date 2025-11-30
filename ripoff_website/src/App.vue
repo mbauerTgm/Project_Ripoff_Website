@@ -1,5 +1,9 @@
 <script setup>
 import HomeView from './views/HomeView.vue';
+import Kamera_Movement_Video from './assets/dominiks_fußbilder/Kamera_Movement_Video.mp4'
+import Movement from './assets/dominiks_fußbilder/Movement.png'
+import FOV from './assets/dominiks_fußbilder/FOV.png'
+import Thumbnail from './assets/dominiks_fußbilder/Thumbnail.png'
 import CommandoMenu from './assets/dominiks_fußbilder/galleryUICommandoMenu.png'
 import TitleScreen1 from './assets/dominiks_fußbilder/galleryUITitleScreen1.png'
 import TitleScreen2 from './assets/dominiks_fußbilder/galleryUITitleScreen2.png'
@@ -40,6 +44,31 @@ export default {
   data() {
     return {
       images: [
+        {
+          type: 'video',
+          videoSrc: 
+            Kamera_Movement_Video,
+          thumbnailURL:
+            Thumbnail,
+          width: 1492,
+          height: 830,
+        },
+        {
+          largeURL:
+            Movement,
+          thumbnailURL:
+            Movement,
+          width: 456,
+          height: 403,
+        },
+        {
+          largeURL:
+            FOV,
+          thumbnailURL:
+            FOV,
+          width: 942,
+          height: 532,
+        },
         {
           largeURL:
             TitleScreen1,

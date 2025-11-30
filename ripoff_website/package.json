@@ -9,6 +9,7 @@
   "dependencies": {
     "materialize": "^1.0.0",
     "photoswipe": "^5.4.4",
+    "photoswipe-video-plugin": "^1.0.2",
     "vue": "^3.2.13",
     "vuetify": "^3.10.5",
     "yarn": "^1.22.22"

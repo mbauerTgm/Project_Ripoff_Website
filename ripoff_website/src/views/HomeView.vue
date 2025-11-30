@@ -243,13 +243,17 @@
         <a
           v-for="(image, key) in images"
           :key="key"
-          :href="image.largeURL"
+          
+          :href="image.videoSrc || image.largeURL"
           :data-pswp-width="image.width"
           :data-pswp-height="image.height"
+          
+          :data-pswp-type="image.type"
+          
           target="_blank"
           rel="noreferrer"
         >
-          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-height: 270px; object-fit: cover;"/>
+          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-width: 500px; object-fit: cover;"/>
         </a>
       </div>
       </section>
@@ -294,6 +298,7 @@
 import { ref, onMounted, onUnmounted } from "vue"
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
+import PhotoSwipeVideoPlugin from 'photoswipe-video-plugin';
 
 import Foto_Maximilian_Bauer from "../assets/Foto_Maximilian_Bauer.jpg"
 import Foto_Victor_Bublinskyy from "../assets/Foto_Victor_Bublinskyy.jpg"
@@ -319,6 +324,11 @@ onMounted(() => {
       children: 'a',
       pswpModule: () => import('photoswipe'),
     });
+
+    const videoPlugin = new PhotoSwipeVideoPlugin(lightbox, {
+      // Hier werden Attribute automatisch erkannt, wenn sie im HTML gesetzt sind
+    });
+
     lightbox.init();
   }
 })
@@ -340,7 +350,7 @@ const scrollTo = (id) => {
 }
 
 const handleScroll = () => {
-  const sections = ["hero", "aufgabe", "team", "meilensteine","timeline", "kontakt"]
+  const sections = ["hero", "aufgabe", "team", "meilensteine","timeline", "gallery", "kontakt"]
   for (const id of sections) {
     const el = document.getElementById(id)
     if (el) {
