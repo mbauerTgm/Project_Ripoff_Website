@@ -66,8 +66,8 @@ export default {
             FOV,
           thumbnailURL:
             FOV,
-          width: 942,
-          height: 532,
+          width: 456,
+          height: 403,
         },
         {
           largeURL:
