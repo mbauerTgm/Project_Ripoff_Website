@@ -1,375 +1,52 @@
 <template>
-  <v-app class="exo">
-    <!-- Navbar -->
-    <v-app-bar app flat class="nav-bar exo">
-      <v-toolbar-title style="width:30% "class="text-h5 font-weight-bold text-primary-darken-2 exo">
-        <v-btn class="button2" style="width:25%; margin-left:-75%"@click="scrollUp()"><img src="../assets/disposableheroesHigherquality.png" style="height: 100%; width: 100%;"></v-btn>
-          </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn 
-      v-for="link in navLinks" 
-      :key="link.id" 
-      text 
-      class="button text-body-1 font-weight-medium" 
-      :class="{ 'active-nav-btn': activeSection === link.id }"
-      @click="scrollTo(link.id)">
-        {{ link.label }}
-      </v-btn>
+  <div class="home-wrapper">
+    <MobileLayout 
+      v-if="mobile"
+      :galleryID="galleryID"
+      :images="images"
+      :team="team"
+      :milestones="milestones"
+      :navLinks="navLinks"
+    />
 
-    </v-app-bar>
-    <v-main id="title" class="main-bg" :style="{ backgroundImage: `url(${RenderFinal})` }">
-      <div class="hero-background"></div>
-
-      <!-- HERO -->
-
-      <section id="hero" class="hero-section d-flex align-center justify-center text-center">
-        <div class="fade-in">
-          <h1 class="display-2 font-weight-bold text-primary-darken-2 mb-4">
-            Disposable Heroes
-          </h1>
-          <p class="text-h6 mb-6 text-grey-darken-2 exo">
-            Ein Squad-basiertes Taktik-Spiel
-          </p>
-          <!--
-          <v-btn style="color:#FCFCFC" color="#4F708A" variant="flat" size="x-large" elevation="2" class="px-8" @click="scrollTo('aufgabe')">
-            Mehr erfahren
-          </v-btn>
-          -->
-        </div>
-      </section>
-
-      <!-- Aufgabe -->
-      <section id="aufgabe" class="section-container">
-        <h2 class="section-title">Projektbeschreibung</h2>
-        <v-container class="py-8">
-          <v-row justify="center">
-            <v-col cols="12" md="15">
-              <v-card class="elevated-card pa-15">
-                <p style="font-size: 1.5rem">
-                  Das geplante Projekt ist ein Squad-basiertes Singleplayer-Spiel mit Fokus auf taktischem
-                  Teammanagement in einer 3D-Umgebung aus Top-Down-Perspektive.
-                </p>
-                <p style="font-size: 1.5rem">
-                  Der Spieler steuert ein Team, das koordiniert Räumlichkeiten betritt und Gefahren beseitigt.
-                </p>
-                <p style="font-size: 1.5rem">
-                  Das Szenario spielt in einer Science-Fiction Zukunft in KI die Welt übernommen hat und sich in
-                  Fraktionen gespalten hat. Nun sind sie alle auf der Suche nach wertvollen Daten Resourcen.
-                </p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- Team -->
-      <section id="team" class="section-container">
-        <h2 class="section-title">Unser Team</h2>
-        <v-container>
-          <v-row justify="center" align="stretch" dense>
-            <v-col cols="12" sm="6" md="3" v-for="member in team" :key="member.name">
-              <v-card class="team-card pa-5 text-center">
-                <v-avatar size="200" class="mx-auto mb-4">
-                  <v-img :src="member.image" cover />
-                </v-avatar>
-                <h4 class="text-primary-darken-2 font-weight-bold" style="margin-bottom: 0%;">
-                  {{ member.first_name }}
-                </h4>
-                <h4 class="text-primary-darken-2 font-weight-bold" style="margin-top: 0%;">
-                  {{ member.last_name }}
-                </h4>
-                <p class="text-primary mb-1">{{ member.role }}</p>
-                <p class="text-black-darken-1">{{ member.desc }}</p>
-                <p class="text-grey-darken-1 email">{{ member.email }}</p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- Meilensteine -->
-      <section id="meilensteine" class="section-container">
-        <h2 class="section-title">Meilensteine</h2>
-        <v-container>
-          <v-data-table :headers="headers" :items="milestones" class="elevated-card text-grey-darken-3"
-            hide-default-footer style="font-size: 1.5rem;">
-            <template v-slot:item.task="{ item }">
-              <span>{{ item.task }}</span>
-            </template>
-            <template v-slot:item.date="{ item }">
-              <v-chip color="primary" text-color="white" variant="flat">
-                {{ item.date }}
-              </v-chip>
-            </template>
-          </v-data-table>
-        </v-container>
-      </section>
-
-      <!-- Fortschritt -->
-      <section id="timeline" class="section-container exo">
-        <h2 class="section-title">Fortschritt</h2>
-        <v-container class="py-8" justify="center">
-          <v-row justify="center">
-            <v-col cols="12" md="18">
-              <v-card class="elevated-card pa-15 text-center">
-                <v-timeline align="start">
-
-                  <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        02.10.2025
-                      </div>
-                    </template>
-
-                    <v-sheet
-                      class="exo pa-3"
-                      rounded="lg"
-                      elevation="0"
-                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
-                    >
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Observer Pattern Implementierung
-                      </div>
-
-                      <div class="text-body-2 exo" style="color: #555;">
-                        Fertigstellung des Messaging Services inkl. Dokumentation, zur umsetzungen des Observer Patterns in den Systemen
-                      </div>
-                    </v-sheet>
-                  </v-timeline-item>
-                  
-                  <v-timeline-item :dot-color="'#4F708A'">
-                  <template v-slot:opposite>
-                    <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                      21.10.2025
-                    </div>
-                  </template>
-
-                  <v-sheet
-                    class="exo pa-3"
-                    rounded="lg"
-                    elevation="0"
-                    style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
-                  >
-                    <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                      Kamera System fertiggestellt
-                    </div>
-
-                    <div class="text-body-2 exo" style="color: #555;">
-                      Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's
-                      Cinemachine 3 implementiert.
-                    </div>
-                  </v-sheet>
-                </v-timeline-item>
-
-
-                  <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        22.10.2025
-                      </div>
-                    </template>
-
-                    <v-sheet
-                      class="exo pa-3"
-                      rounded="lg"
-                      elevation="0"
-                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
-                    >
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Modellierung des Haupt-Charakters fertiggestellt
-                      </div>
-
-                      <div class="text-body-2 exo" style="color: #555;">
-                        Das Modell des Haupt-Charakter wurde samt Texturen in Blender fertiggestellt
-                      </div>
-                    </v-sheet>
-                  </v-timeline-item>
-
-                  <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        05.11.2025
-                      </div>
-                    </template>
-
-                    <v-sheet
-                      class="exo pa-3"
-                      rounded="lg"
-                      elevation="0"
-                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
-                    >
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Design des Hauptmenü fertiggestellt
-                      </div>
-
-                      <div class="text-body-2 exo" style="color: #555;">
-                        Das Design des Hauptmenüs wurde fertiggestellt inklusive Einstellungen und mit dem Prototyp verbunden.
-                      </div>
-                    </v-sheet>
-                  </v-timeline-item>
-                   <v-timeline-item :dot-color="'#4F708A'">
-                    <template v-slot:opposite>
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        6.11.2025
-                      </div>
-                    </template>
-
-                    <v-sheet
-                      class="exo pa-3"
-                      rounded="lg"
-                      elevation="0"
-                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
-                    >
-                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        UI Kommandomenü fertiggestellt
-                      </div>
-
-                      <div class="text-body-2 exo" style="color: #555;">
-                        Das Kommandomenü wurde fertiggestellt und mit dem Observer Pattern verbunden.
-                      </div>
-                    </v-sheet>
-                  </v-timeline-item>
-                </v-timeline>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- Bilder-Galerie -->
-      <section id="gallery" class="section-container text-center">
-        <h2 class="section-title">Entwicklungs Insights</h2>
-          <div :id="galleryID">
-        <a
-          v-for="(image, key) in images"
-          :key="key"
-          
-          :href="image.videoSrc || image.largeURL"
-          :data-pswp-width="image.width"
-          :data-pswp-height="image.height"
-          
-          :data-pswp-type="image.type"
-          
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-width: 500px; object-fit: cover;"/>
-        </a>
-      </div>
-      </section>
-
-
-
-      <!-- Kontakt -->
-      <section id="kontakt" class="section-container text-center">
-        <h2 class="section-title">Kontakt</h2>
-        <v-container class="py-8">
-          <v-row justify="center">
-            <v-col cols="12" md="15">
-              <v-card class="elevated-card pa-15">
-                <p class="text-grey-darken-2" style="font-size: 1.45rem">
-                  Bei Fragen oder Feedback kontaktieren sie uns gerne unter den oben stehenden Email Addressen.
-                </p>
-                <p class="text-grey-darken-2" style="font-size: 1.45rem">
-                  Oder kontaktieren sie unseren Betreuer: Herr Mag. Dr. Eugen Jiresch, ejiresch@tgm.ac.at
-                </p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-      <v-btn icon class="button" style="margin-bottom: 2%;" @click="scrollUp()">
-        <v-icon>mdi-chevron-up</v-icon>
-      </v-btn>
-    </v-main>
-
-    <!-- Footer -->
-    <v-footer class="footer-light">
-      <v-container>
-        <p class="text-center text-grey-darken-1 mb-0">
-          © 2025 Disposable Heroes - Alle Rechte vorbehalten
-        </p>
-      </v-container>
-    </v-footer>
-  </v-app>
+    <DesktopLayout 
+      v-else
+      :galleryID="galleryID"
+      :images="images"
+      :team="team"
+      :milestones="milestones"
+      :navLinks="navLinks"
+    />
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue"
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
-import PhotoSwipeVideoPlugin from 'photoswipe-video-plugin';
+import { ref } from "vue"
+import { useDisplay } from "vuetify"
 
+// Importiere die zwei Layout-Komponenten
+// Stelle sicher, dass du diese Dateien im Ordner /components erstellt hast!
+import DesktopLayout from "./DesktopLayout.vue"
+import MobileLayout from "./MobileLayout.vue"
+
+// Assets für Team (Daten hier, damit wir sie nicht doppelt schreiben müssen)
 import Foto_Maximilian_Bauer from "../assets/Foto_Maximilian_Bauer.jpg"
 import Foto_Victor_Bublinskyy from "../assets/Foto_Victor_Bublinskyy.jpg"
 import Foto_Jakob_Fenzl from "../assets/Foto_Jakob_Fenzl.jpg"
 import Foto_Dominik_Sandler from "../assets/Foto_Dominik_Sandler.jpg"
-import RenderFinal from "../assets/Render4k.png"
 
+// Props von App.vue empfangen
 const props = defineProps({
   galleryID: String,
   images: Array,
 });
 
-const activeSection = ref("hero")
-let lightbox = null;
+// Vuetify Mobile Check
+const { mobile } = useDisplay()
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll)
-  handleScroll() 
-
-  if (!lightbox) {
-    lightbox = new PhotoSwipeLightbox({
-      gallery: '#' + props.galleryID, 
-      children: 'a',
-      pswpModule: () => import('photoswipe'),
-    });
-
-    const videoPlugin = new PhotoSwipeVideoPlugin(lightbox, {
-      // Hier werden Attribute automatisch erkannt, wenn sie im HTML gesetzt sind
-    });
-
-    lightbox.init();
-  }
-})
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll)
-  
-
-  if (lightbox) {
-    lightbox.destroy();
-    lightbox = null;
-  }
-})
-
-const scrollTo = (id) => {
-  activeSection.value = id
-  const el = document.getElementById(id)
-  if (el) el.scrollIntoView({ behavior: "smooth" })
-}
-
-const handleScroll = () => {
-  const sections = ["hero", "aufgabe", "team", "meilensteine","timeline", "gallery", "kontakt"]
-  for (const id of sections) {
-    const el = document.getElementById(id)
-    if (el) {
-      const rect = el.getBoundingClientRect()
-      if (rect.top <= 150 && rect.bottom >= 150) {
-        activeSection.value = id
-        break
-      }
-    }
-  }
-}
-
-function scrollUp(){
-  const el = document.getElementById("title")
-  if (el) el.scrollIntoView({ behavior: "smooth" })
-}
-
-
+// --- GEMEINSAME DATEN ---
 const navLinks = [
+  {id: "title", label: "Disposable Heroes"},
   { id: "aufgabe", label: "Aufgabe" },
   { id: "team", label: "Team" },
   { id: "meilensteine", label: "Meilensteine" },
@@ -413,11 +90,6 @@ const team = ref([
   },
 ])
 
-const headers = [
-  { title: "Meilenstein", key: "task", sortable: false },
-  { title: "Datum", key: "date", sortable: false  },
-]
-
 const milestones = [
   { task: "Entwicklung eines ersten funktionierenden Prototyps abgeschlossen", date: "14.10.2025" },
   { task: "UI für Spieleranweisungen fertiggestellt", date: "30.10.2025" },
@@ -430,171 +102,3 @@ const milestones = [
   { task: "Projekt veröffentlicht", date: "28.02.2026" },
 ]
 </script>
-
-<style scoped>
-.exo {
-  font-family: 'Exo 2';
-}
-
-.no-press-color:active {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
-.v-main,
-.v-container {
-  background: transparent !important;
-}
-
-.v-app-bar.exo,
-.v-app-bar.exo * {
-  font-family: 'Exo 2', sans-serif !important;
-}
-
-.main-bg {
-  position: relative;
-  overflow: hidden;
-  color: #1a1a1a;
-}
-
-.hero-section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: transparent;
-  z-index: 2;
-}
-
-.hero-background {
-  position: absolute;
-  top: calc(var(--v-toolbar-height, 64px));
-  left: 0;
-  width: 100%;
-  height: calc(250vh - var(--v-toolbar-height, 64px));
-  background-image: url("../assets/Render4k.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: cover;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-section > div {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-fade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #f7f8fa 100%);
-  z-index: 0; 
-}
-
-.section-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: transparent !important;
-  position: relative;
-  z-index: 2;
-}
-
-.section-container-no-top {
-  padding-top: 0%;
-  padding-bottom: 6rem;
-  background: transparent !important;
-  position: relative;
-  z-index: 2;
-}
-
-.section-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 3.rem;
-  margin-bottom: 3rem;
-  color: #2b3a4a;
-}
-
-.elevated-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
-
-.team-card {
-  background: white;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  min-height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(79, 112, 138, 0.2);
-}
-
-.footer-light {
-  background: #f0f2f5;
-  border-top: 3px solid rgba(0, 0, 0, 0.08);
-  padding: 1.5rem 0;
-}
-
-
-.fade-in {
-  animation: fadeIn 1.2s ease-in-out forwards;
-}
-
-.email {
-  margin-top: auto;
-  font-size: 0.95rem;
-}
-
-.button {
-  background-color: #ffffff;
-  color: #2b3a4a;
-}
-
-.button2{
-background-color: #ffffff;
-}
-
-.active-nav-btn {
-  background-color: rgba(79, 112, 138, 0.15) !important;
-  color: #4F708A !important;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.button:not(.active-nav-btn):hover {
-  background-color: rgba(79, 112, 138, 0.08);
-  color: #4F708A;
-}
-
-.unfinished_timeline_thing{
-  color: "#4F708A";
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
