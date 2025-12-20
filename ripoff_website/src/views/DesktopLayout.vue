@@ -229,6 +229,53 @@
                       </div>
                     </v-sheet>
                   </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        07.11.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Erster Prototyp
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde aus allen bisherigen Ergebnissen ein technischer Prototyp erstellt. Dieser wurde dann bei "Tag der offenen Tür" am TGM, den Besuchern, vorgestellt.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        11.11.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Kamera verbessert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Die Interpolationskurve, beziehungsweise das Dampening der Kamera wurde angepasst um ein besseres Erlebnis zu bieten.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
                 </v-timeline>
               </v-card>
             </v-col>

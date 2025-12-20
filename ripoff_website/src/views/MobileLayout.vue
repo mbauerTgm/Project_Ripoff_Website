@@ -118,6 +118,16 @@
                              <div class="text-subtitle-2 font-weight-bold">UI Kommandomenü fertiggestellt </div>
                              <div class="text-caption text-grey-darken-1">Das Kommandomenü wurde fertiggestellt und mit dem Observer Pattern verbunden. </div>
                         </v-timeline-item>
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                             <div class="mb-2 text-caption">07.11.2025</div>
+                             <div class="text-subtitle-2 font-weight-bold">Erster Prototyp</div>
+                             <div class="text-caption text-grey-darken-1">Es wurde aus allen bisherigen Ergebnissen ein technischer Prototyp erstellt. Dieser wurde dann bei "Tag der offenen Tür" am TGM, den Besuchern, vorgestellt.</div>
+                        </v-timeline-item>
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                             <div class="mb-2 text-caption">11.11.2025</div>
+                             <div class="text-subtitle-2 font-weight-bold">Kamera verbessert</div>
+                             <div class="text-caption text-grey-darken-1">Die Interpolationskurve, beziehungsweise das Dampening der Kamera wurde angepasst um ein besseres Erlebnis zu bieten.</div>
+                        </v-timeline-item>
                    </v-timeline>
                </v-card>
            </v-container>
