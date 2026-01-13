@@ -275,6 +275,160 @@
                       </div>
                     </v-sheet>
                   </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        19.12.2025
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Zwei Models fertig
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Zwei Models wurden fertig modelliert, texturiert und verfügen jeweils über eine Idle Animation.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        27.12.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Hauptmenü funktional fertiggestellt
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Das Hauptmenü ist nun funktionsfähig und mit den entsprechenden Szenen verbunden.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        01.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Desing/Implementation des Ersten Level
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Erstellung von Grundlayout des ersten Levels und Organisation der Projekt-Files. Überarbeitung mit besseren Assets ausständig.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        03.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Team movement verbessert und erweitert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurden basic Methode für das Movement für die Teammates integriert. z.b: FollowLeader,HoldPosition,MoveToPosition
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        04.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Field of View/Fog of War verbessert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde eine neue Iteration des Field of View/Fog of War System erstellt. Es wurde gefixed, dass der Spieler durch Wände schauen kann und es wurde um den Spieler ein Viewcone ähnlicher Kreis hinzugefügt.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        04.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        SFX Service erstellt
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde ein SFX Service erstellt, welcher es ermöglicht Soundeffekte zentral zu verwalten und abzuspielen.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        12.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Teammate Formationen wurden grundsetztlich implementiert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es ist möglich Formationen zu definieren, welche über Events ausgelöst werden können. Die Teammates können diese einzelnen Position einnehmen.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
 
                 </v-timeline>
               </v-card>
@@ -300,7 +454,7 @@
           target="_blank"
           rel="noreferrer"
         >
-          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-width: 500px; object-fit: cover;"/>
+          <img :src="image.thumbnailURL" alt="" style="margin: 5px; max-width: 500px; max-height: 300px; object-fit: cover;"/>
         </a>
       </div>
       </section>

@@ -88,46 +88,130 @@
         </v-container>
       </section>
 
-      <section id="timeline" class="section-container">
+      <section id="timeline" class="section-container exo" >
           <h2 class="section-title text-h4">Fortschritt</h2>
            <v-container>
                <v-card class="elevated-card pa-4">
                    <v-timeline side="end" density="compact" align="start">
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">02.10.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Observer Pattern Implementierung</div>
                              <div class="text-caption text-grey-darken-1">Fertigstellung des Messaging Services inkl. Dokumentation, zur umsetzungen des Observer Patterns in den Systemen </div>
+                          </v-sheet>
                         </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                            <v-sheet
+                              class="exo pa-3"
+                              rounded="lg"
+                              elevation="0"
+                              style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">21.10.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Kamera System fertiggestellt </div>
                              <div class="text-caption text-grey-darken-1">Das Kamera-System und die dazugehörige Steuerung wurden mittels Unity's Cinemachine 3 implementiert. </div>
-                        </v-timeline-item>
+                            </v-sheet>
+                            </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">22.10.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Modellierung des Haupt-Charakters fertiggestellt </div>
                              <div class="text-caption text-grey-darken-1">Das Modell des Haupt-Charakter wurde samt Texturen in Blender fertiggestellt </div>
-                        </v-timeline-item>
+                          </v-sheet>
+                            </v-timeline-item>
                          <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">06.11.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Design des Hauptmenü fertiggestellt </div>
                              <div class="text-caption text-grey-darken-1">Das Design des Hauptmenüs wurde fertiggestellt inklusive Einstellungen und mit dem Prototyp verbunden. </div>
-                        </v-timeline-item>
+                          </v-sheet>
+                            </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">06.11.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">UI Kommandomenü fertiggestellt </div>
                              <div class="text-caption text-grey-darken-1">Das Kommandomenü wurde fertiggestellt und mit dem Observer Pattern verbunden. </div>
-                        </v-timeline-item>
+                          </v-sheet>
+                            </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">07.11.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Erster Prototyp</div>
                              <div class="text-caption text-grey-darken-1">Es wurde aus allen bisherigen Ergebnissen ein technischer Prototyp erstellt. Dieser wurde dann bei "Tag der offenen Tür" am TGM, den Besuchern, vorgestellt.</div>
-                        </v-timeline-item>
+                        </v-sheet>
+                            </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
                              <div class="mb-2 text-caption">11.11.2025</div>
                              <div class="text-subtitle-2 font-weight-bold">Kamera verbessert</div>
                              <div class="text-caption text-grey-darken-1">Die Interpolationskurve, beziehungsweise das Dampening der Kamera wurde angepasst um ein besseres Erlebnis zu bieten.</div>
+                          </v-sheet>
                         </v-timeline-item>
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                        <v-sheet
+                          class="exo pa-3"
+                          rounded="lg"
+                          elevation="0"
+                          style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                        >
+                          <div class="mb-2 text-caption">
+                            03.01.2026
+                          </div>
+
+                          <div class="text-subtitle-2 font-weight-bold">
+                            Team movement verbessert und erweitert
+                          </div>
+
+                          <div class="text-caption text-grey-darken-1">
+                            Es wurden basic Methoden für das Movement der Teammates integriert, 
+                            z.B. FollowLeader, HoldPosition und MoveToPosition.
+                          </div>
+                        </v-sheet>
+                      </v-timeline-item>
+                      <v-timeline-item dot-color="#4F708A" size="small">
+                        <v-sheet
+                          class="exo pa-3"
+                          rounded="lg"
+                          elevation="0"
+                          style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                        >
+                          <div class="mb-2 text-caption">
+                            12.01.2026
+                          </div>
+
+                          <div class="text-subtitle-2 font-weight-bold">
+                            Teammate Formationen wurden grundsetztlich implementiert
+                          </div>
+
+                          <div class="text-caption text-grey-darken-1">
+                            Es ist möglich Formationen zu definieren, welche über Events ausgelöst werden können. 
+                          </div>
+                        </v-sheet>
+                      </v-timeline-item>
+                            
                    </v-timeline>
                </v-card>
            </v-container>
