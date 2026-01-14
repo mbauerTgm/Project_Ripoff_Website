@@ -17,6 +17,7 @@ import TitleScreen2 from './assets/dominiks_fußbilder/galleryUITitleScreen2.png
 import FOV_no_God_Vision from './assets/dominiks_fußbilder/FOV_no_God_Vision.png'
 import Level_1_Editor from './assets/dominiks_fußbilder/Level_1_Editor.png'
 import SFX_Service from './assets/dominiks_fußbilder/SFX_Service.png'
+import Improved_Movement from './assets/dominiks_fußbilder/Improved_Movement.png'
 
 // Bilder Daten
 const images = ref([
@@ -35,6 +36,7 @@ const images = ref([
   { largeURL: Level_1_Editor, thumbnailURL: Level_1_Editor, width: 1100, height: 544},
   { largeURL: FOV_no_God_Vision, thumbnailURL: FOV_no_God_Vision, width: 220, height: 209},
   { largeURL: SFX_Service, thumbnailURL: SFX_Service, width: 441, height: 618 },
+  { largeURL: Improved_Movement, thumbnailURL: Improved_Movement, width: 461, height: 299 },
 
 ]);
 </script>
