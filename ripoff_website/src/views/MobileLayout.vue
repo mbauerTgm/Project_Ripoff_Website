@@ -171,6 +171,17 @@
                           </v-sheet>
                         </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
+                             <div class="mb-2 text-caption">01.01.2026</div>
+                             <div class="text-subtitle-2 font-weight-bold">Desing/Implementation des Ersten Level</div>
+                             <div class="text-caption text-grey-darken-1">Erstellung von Grundlayout des ersten Levels und Organisation der Projekt-Files. Überarbeitung mit besseren Assets ausständig.</div>
+                          </v-sheet>
+                        </v-timeline-item>
+                        <v-timeline-item dot-color="#4F708A" size="small">
                         <v-sheet
                           class="exo pa-3"
                           rounded="lg"
@@ -191,6 +202,17 @@
                           </div>
                         </v-sheet>
                       </v-timeline-item>
+                      <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
+                             <div class="mb-2 text-caption">04.01.2026</div>
+                             <div class="text-subtitle-2 font-weight-bold">Field of View/Fog of War verbessert</div>
+                             <div class="text-caption text-grey-darken-1">Es wurde eine neue Iteration des Field of View/Fog of War System erstellt. Es wurde gefixed, dass der Spieler durch Wände schauen kann und es wurde um den Spieler ein Viewcone ähnlicher Kreis hinzugefügt.</div>
+                          </v-sheet>
+                        </v-timeline-item>
                       <v-timeline-item dot-color="#4F708A" size="small">
                         <v-sheet
                           class="exo pa-3"
