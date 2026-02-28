@@ -18,6 +18,10 @@ import FOV_no_God_Vision from './assets/dominiks_fußbilder/FOV_no_God_Vision.pn
 import Level_1_Editor from './assets/dominiks_fußbilder/Level_1_Editor.png'
 import SFX_Service from './assets/dominiks_fußbilder/SFX_Service.png'
 import Improved_Movement from './assets/dominiks_fußbilder/Improved_Movement.png'
+import ErstesLevel_V2 from './assets/dominiks_fußbilder/ErstesLevel_V2.png'
+import FOW_V3 from './assets/dominiks_fußbilder/FOW_V3.png'
+import PlayerCharacterV2 from './assets/dominiks_fußbilder/PlayerCharacterV2.png'
+import Objective from './assets/dominiks_fußbilder/Objective.png'
 
 // Bilder Daten
 const images = ref([
@@ -37,6 +41,11 @@ const images = ref([
   { largeURL: FOV_no_God_Vision, thumbnailURL: FOV_no_God_Vision, width: 220, height: 209},
   { largeURL: SFX_Service, thumbnailURL: SFX_Service, width: 441, height: 618 },
   { largeURL: Improved_Movement, thumbnailURL: Improved_Movement, width: 461, height: 299 },
+  { largeURL: ErstesLevel_V2, thumbnailURL: ErstesLevel_V2, width: 1102, height: 577  },
+  { largeURL: FOW_V3, thumbnailURL: FOW_V3, width: 583, height: 453 },
+  { largeURL: PlayerCharacterV2, thumbnailURL: PlayerCharacterV2, width: 653, height: 435 },
+  { largeURL: Objective, thumbnailURL: Objective, width: 414, height: 367 },
+  
 
 ]);
 </script>

@@ -235,26 +235,131 @@
                              <div class="text-caption text-grey-darken-1">Es wurde ein SFX Service erstellt, welcher es ermöglicht Soundeffekte zentral zu verwalten und abzuspielen.</div>
                           </v-sheet>
                         </v-timeline-item>
-                      <v-timeline-item dot-color="#4F708A" size="small">
-                        <v-sheet
-                          class="exo pa-3"
-                          rounded="lg"
-                          elevation="0"
-                          style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
-                        >
-                          <div class="mb-2 text-caption">
-                            12.01.2026
-                          </div>
 
-                          <div class="text-subtitle-2 font-weight-bold">
-                            Teammate Formationen wurden grundsetztlich implementiert
-                          </div>
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              12.01.2026
+                            </div>
 
-                          <div class="text-caption text-grey-darken-1">
-                            Es ist möglich Formationen zu definieren, welche über Events ausgelöst werden können. 
-                          </div>
-                        </v-sheet>
-                      </v-timeline-item>
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Teammate Formationen wurden grundsetztlich implementiert
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Es ist möglich Formationen zu definieren, welche über Events ausgelöst werden können. 
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              27.01.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Erstellung des 1. Levels (Tutorial)
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                               Es wurde mit Prefabs, die noch nicht die finalen Modelle enthalten die Strucktur / das Layout des ersten Levels erstellt.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              03.02.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Shooting Mechanic Implementiert
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Es wurde die Logik & Prefabs erstellt, um die Shooting Mechanic zu implementieren. Weiters wurde eine Hitregistration und daraus enstehende Events erstellt.</div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              04.02.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Objective
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Es wurde eine allgemeine Interaction Logik erstellt, so wie das Objective & zugehöriges Prefab.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              11.02.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Komplettüberarbeitung Field of View/Fog of War
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Es wurden zwei komplett neu Versionen/Iterationen des Field of View/Fog of War erstellt und implementiert.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              04.02.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Komplettüberarbeitung PlayerCharcter
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
                             
                    </v-timeline>
                </v-card>

@@ -429,6 +429,121 @@
                       </div>
                     </v-sheet>
                   </v-timeline-item>
+                  
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        27.01.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Erstellung des 1. Levels (Tutorial)
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde mit Prefabs, die noch nicht die finalen Modelle enthalten die Strucktur / das Layout des ersten Levels erstellt.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        03.02.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Shooting Mechanic Implementiert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde die Logik & Prefabs erstellt, um die Shooting Mechanic zu implementieren. Weiters wurde eine Hitregistration und daraus enstehende Events erstellt.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        04.02.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Objective
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde eine allgemeine Interaction Logik erstellt, so wie das Objective & zugehöriges Prefab.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        11.02.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Komplettüberarbeitung Field of View/Fog of War
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurden zwei komplett neu Versionen/Iterationen des Field of View/Fog of War erstellt und implementiert.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        04.02.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Komplettüberarbeitung PlayerCharcter
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
 
                 </v-timeline>
               </v-card>
