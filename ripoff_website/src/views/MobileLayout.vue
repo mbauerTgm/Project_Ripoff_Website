@@ -11,32 +11,32 @@
     </v-navigation-drawer>
 
     <v-app-bar app flat class="nav-bar exo">
-      <v-toolbar-title class="font-weight-bold text-primary-darken-2">
-         
-      </v-toolbar-title>
-      <v-img 
-    src="../assets/disposableheroesHigherquality.png" 
-    max-height="20" 
-    contain 
-    @click="scrollUp()" 
-    style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); cursor: pointer;"
-  ></v-img>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    </v-app-bar>
+  <img src="../assets/disposableheroesHigherquality.png" v-on:click="scrollUp" max-width="45" 
+    height="30" contains class="ml-4 cursor-pointer"/>
+
+  <v-toolbar-title class="font-weight-bold text-primary-darken-2">
+    </v-toolbar-title>
+  
+  <v-spacer></v-spacer>
+  
+  <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+</v-app-bar>
 
     <v-main id="title" class="main-bg">
        <div class="hero-background" :style="{ backgroundImage: `url(${RenderFinal})` }"></div>
-      <section id="hero" class="hero-section d-flex flex-column align-center justify-center text-center">
-        <v-card rounded="lg">
-          <h1 class="text-h4 font-weight-bold text-primary-darken-2 mb-4 ma-2">
-            Disposable Heroes
-          </h1>
-          <p class="text-body-1 font-weight-bold mb-6 text-grey-darken-2 exo">
-            Ein Squad-basiertes Taktik-Spiel
-          </p>
-        </v-card>
-      </section>
+      <section id="hero" class="hero-section d-flex flex-column align-center justify-top text-center">
+          <div class="hero-content">
+            <div class="mb-4" style="margin-top: 100%;" >
+              <img 
+                src="../assets/disposableheroesHigherquality.png" 
+                style="max-width: 300px; height: auto; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));"
+              />
+            </div>
+            <p class="text-h5 font-weight-bold text-white exo hero-subtitle" style="margin: 10%">
+              Ein Squad-basiertes Taktik-Spiel
+            </p>
+          </div>
+        </section>
 
       <section id="aufgabe" class="section-container">
         <h2 class="section-title text-h4">Projektbeschreibung</h2>
@@ -508,18 +508,27 @@ function scrollUp(){
 }
 .exo { font-family: 'Exo 2', sans-serif; }
 .main-bg { position: relative; background: transparent !important;}
+.hero-content {
+  margin-top: -15vh;
+  z-index: 5;
+}
+.hero-subtitle {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
 .hero-background {
   position: absolute;
-  top: 64px;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: calc(60dvh - 64px);
+  height: calc(100dvh - 32px); 
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
 }
+
 .hero-section {
-  min-height: calc(60dvh - 64px);
+  height: 100vh;
   position: relative;
   z-index: 2;
 }
