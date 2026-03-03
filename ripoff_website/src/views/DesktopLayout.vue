@@ -452,7 +452,28 @@
                       </div>
                     </v-sheet>
                   </v-timeline-item>
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        28.01.2026
+                      </div>
+                    </template>
 
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        VFX Service erstellt
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde ein VFX Service erstellt, welcher es ermöglicht visuelle Effekte zentral zu verwalten und abzuspielen.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
                   <v-timeline-item :dot-color="'#4F708A'">
                     <template v-slot:opposite>
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
@@ -464,7 +485,7 @@
                       class="exo pa-3"
                       rounded="lg"
                       elevation="0"
-                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
                         Shooting Mechanic Implementiert
@@ -487,7 +508,7 @@
                       class="exo pa-3"
                       rounded="lg"
                       elevation="0"
-                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
                         Objective
@@ -495,6 +516,29 @@
 
                       <div class="text-body-2 exo" style="color: #555;">
                         Es wurde eine allgemeine Interaction Logik erstellt, so wie das Objective & zugehöriges Prefab.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        04.02.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Komplettüberarbeitung PlayerCharcter
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
                       </div>
                     </v-sheet>
                   </v-timeline-item>
@@ -525,7 +569,7 @@
                   <v-timeline-item :dot-color="'#4F708A'">
                     <template v-slot:opposite>
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        04.02.2026
+                        20.02.2026
                       </div>
                     </template>
 
@@ -536,11 +580,34 @@
                       style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
                     >
                       <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
-                        Komplettüberarbeitung PlayerCharcter
+                        Supress Position implementiert
                       </div>
 
                       <div class="text-body-2 exo" style="color: #555;">
-                        Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
+                        Teammates können nach Anweisung des Player schießen und auch auf Gegner reagieren wenn die im Sichtfeld sind.
+                      </div>
+                    </v-sheet>
+                  </v-timeline-item>
+
+                  <v-timeline-item :dot-color="'#4F708A'">
+                    <template v-slot:opposite>
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        02.03.2026
+                      </div>
+                    </template>
+
+                    <v-sheet
+                      class="exo pa-3"
+                      rounded="lg"
+                      elevation="0"
+                      style="border-right: 3px solid #4F708A; background-color: #f8fafb;"
+                    >
+                      <div class="text-h6 exo" style="color: #4F708A; font-weight: 600;">
+                        Team-AI Verhalten verfeinert
+                      </div>
+
+                      <div class="text-body-2 exo" style="color: #555;">
+                        Der Verhaltensbaum wurde zum Teil überarbeitet und Übergänge als auch Edgecases von States besser behandelt.
                       </div>
                     </v-sheet>
                   </v-timeline-item>

@@ -14,23 +14,28 @@
       <v-toolbar-title class="font-weight-bold text-primary-darken-2">
          
       </v-toolbar-title>
-      <v-img src="../assets/disposableheroesHigherquality.png" max-height="20" contain @click="scrollUp()"></v-img>
+      <v-img 
+    src="../assets/disposableheroesHigherquality.png" 
+    max-height="20" 
+    contain 
+    @click="scrollUp()" 
+    style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); cursor: pointer;"
+  ></v-img>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-main id="title" class="main-bg">
        <div class="hero-background" :style="{ backgroundImage: `url(${RenderFinal})` }"></div>
-
-      <section id="hero" class="hero-section d-flex align-center justify-center text-center px-4">
-        <div class="fade-in">
-          <h1 class="text-h4 font-weight-bold text-primary-darken-2 mb-4">
+      <section id="hero" class="hero-section d-flex flex-column align-center justify-center text-center">
+        <v-card rounded="lg">
+          <h1 class="text-h4 font-weight-bold text-primary-darken-2 mb-4 ma-2">
             Disposable Heroes
           </h1>
-          <p class="text-body-1 mb-6 text-grey-darken-2 exo">
+          <p class="text-body-1 font-weight-bold mb-6 text-grey-darken-2 exo">
             Ein Squad-basiertes Taktik-Spiel
           </p>
-        </div>
+        </v-card>
       </section>
 
       <section id="aufgabe" class="section-container">
@@ -277,7 +282,17 @@
                             </div>
                           </v-sheet>
                         </v-timeline-item>
-
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;">
+                             <div class="mb-2 text-caption">28.01.2026</div>
+                             <div class="text-subtitle-2 font-weight-bold">VFX Service erstellt</div>
+                             <div class="text-caption text-grey-darken-1">Es wurde ein VFX Service erstellt, welches es ermöglicht visuelle Effekte zentral zu verwalten und abzuspielen.</div>
+                          </v-sheet>
+                        </v-timeline-item>
                         <v-timeline-item dot-color="#4F708A" size="small">
                           <v-sheet
                             class="exo pa-3"
@@ -327,15 +342,15 @@
                             style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
                           >
                             <div class="mb-2 text-caption">
-                              11.02.2026
+                              04.02.2026
                             </div>
 
                             <div class="text-subtitle-2 font-weight-bold">
-                              Komplettüberarbeitung Field of View/Fog of War
+                              Komplettüberarbeitung PlayerCharacter
                             </div>
 
                             <div class="text-caption text-grey-darken-1">
-                              Es wurden zwei komplett neu Versionen/Iterationen des Field of View/Fog of War erstellt und implementiert.
+                              Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
                             </div>
                           </v-sheet>
                         </v-timeline-item>
@@ -348,19 +363,61 @@
                             style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
                           >
                             <div class="mb-2 text-caption">
-                              04.02.2026
+                              11.02.2026
                             </div>
 
                             <div class="text-subtitle-2 font-weight-bold">
-                              Komplettüberarbeitung PlayerCharcter
+                              Komplettüberarbeitung Field of View/Fog of War
                             </div>
 
                             <div class="text-caption text-grey-darken-1">
-                              Es wurde eine komplett neue Version/Iteration des PlayerCharcter inklusive neuen Collidern erstellt.
+                              Es wurden zwei komplett neu Versionen/Iterationen des Field of View/Fog of War erstellt und implementiert.
                             </div>
                           </v-sheet>
                         </v-timeline-item>
                             
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              20.02.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Supress Position implementiert
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Teammates können nach Anweisung des Players schießen und auch auf Gegner reagieren, wenn diese im Sichtfeld sind.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="#4F708A" size="small">
+                          <v-sheet
+                            class="exo pa-3"
+                            rounded="lg"
+                            elevation="0"
+                            style="border-left: 3px solid #4F708A; background-color: #f8fafb;"
+                          >
+                            <div class="mb-2 text-caption">
+                              02.03.2026
+                            </div>
+
+                            <div class="text-subtitle-2 font-weight-bold">
+                              Team-AI Verhalten verfeinert
+                            </div>
+
+                            <div class="text-caption text-grey-darken-1">
+                              Der Verhaltensbaum wurde zum Teil überarbeitet; Übergänge sowie Edgecases von States werden nun besser behandelt.
+                            </div>
+                          </v-sheet>
+                        </v-timeline-item>
+
                    </v-timeline>
                </v-card>
            </v-container>
@@ -445,14 +502,39 @@ function scrollUp(){
 </script>
 
 <style scoped>
-.exo { font-family: 'Exo 2', sans-serif; }
-.main-bg { position: relative; overflow: hidden; }
-.hero-background {
-  position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-  background-repeat: no-repeat; background-position: center; background-size: cover; z-index: 1; pointer-events: none;
+.fade-in {
+  position: relative;
+  z-index: 3;
 }
-.hero-section { height: 80vh; position: relative; z-index: 2; }
-.section-container { padding: 4rem 0; position: relative; z-index: 2; }
-.elevated-card { background: rgba(255, 255, 255, 0.95); border-radius: 16px; }
+.exo { font-family: 'Exo 2', sans-serif; }
+.main-bg { position: relative; background: transparent !important;}
+.hero-background {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(60dvh - 64px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.hero-section {
+  min-height: calc(60dvh - 64px);
+  position: relative;
+  z-index: 2;
+}
+
+.section-container { 
+  padding: 4rem 0; 
+  position: relative; 
+  z-index: 2; 
+  background: #f5f7f9;
+}
+
+.elevated-card { 
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 16px; 
+  backdrop-filter: blur(5px);
+}
 .section-title { margin-bottom: 2rem; color: #2b3a4a; text-align: center; font-weight: 700;}
 </style>
